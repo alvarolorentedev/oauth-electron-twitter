@@ -33,6 +33,7 @@
     "sinon-chai": "^2.8.0"
   },
   "dependencies": {
-    "oauth": "^0.9.14"
+    "oauth": "^0.9.14",
+    "query-string": "^4.1.0"
   }
 }
