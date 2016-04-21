@@ -1,6 +1,6 @@
 {
-  "name": "koteky-lib",
-  "version": "0.1.0",
+  "name": "oauth-electron-twitter",
+  "version": "0.1.1",
   "description": "oauth for twitter inside electron",
   "main": "index.js",
   "scripts": {
