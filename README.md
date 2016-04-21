@@ -3,6 +3,13 @@
 
 Use Twitter OAuth in a simple way inside your electron App.
 
+## Installation
+
+add it to your elenctron project using npm command
+```
+npm install oauth-electron-twitter --save
+```
+
 ## Usage
 
 add the require for ouath and twitter specific code from this package
