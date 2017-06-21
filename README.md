@@ -19,20 +19,24 @@ var oauth = require('oauth-electron-twitter').oauth;
 var twitter = require('oauth-electron-twitter').twitter;
 ```
 
-declare a twitter object, and use it as parameter for the oauth in conjuntion with the electron window used to display the login
+declare a twitter object, and use it as parameter for the oauth in conjuntion with the electron window used to display the login. the login method return a promise with the result or the errror provided by the login pase.
 ```js
+var window = new BrowserWindow({webPreferences: {nodeIntegration: false}});
 var info = new twitter("key","secret");
 var auth = new oauth();
-auth.login(info, window);
+auth.login(info, window).then((result) => {
+               console.log(result);
+          }).catch((error) => {
+               console.log(error);
+          });;
 ```
-the login function will return a Promise with the acces token and secret
+
+the result of this promise is a json object similar to next one
 ```
 {
     oauth_access_token: ***,
     oauth_access_token_secret: ***
 }
 ```
-
-
 
 ###### logo: Award graphic by <a href="http://www.freepik.com/">Freepik</a> and Twitter graphic by <a href="http://www.icomoon.io">Icomoon</a> from <a href="http://www.flaticon.com/">Flaticon</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Made and modified with <a href="http://logomakr.com" title="Logo Maker">Logo Maker </a>
