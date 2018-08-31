@@ -1,42 +1,48 @@
 # ![logo](https://cloud.githubusercontent.com/assets/3071208/14719944/55c32866-07ff-11e6-9821-1a564a0cf065.png)
 
+[![Build Status](https://travis-ci.org/kanekotic/oauth-electron-twitter.svg?branch=master)](https://travis-ci.org/kanekotic/oauth-electron-twitter)
+[![Coverage Status](https://coveralls.io/repos/github/kanekotic/oauth-electron-twitter/badge.svg?branch=master)](https://coveralls.io/github/kanekotic/oauth-electron-twitter?branch=master)
+[![npm](https://img.shields.io/npm/dy/oauth-electron-twitter.svg)](https://github.com/kanekotic/oauth-electron-twitter)
+[![GitHub license](https://img.shields.io/github/license/kanekotic/oauth-electron-twitter.svg)](https://github.com/kanekotic/oauth-electron-twitter/blob/master/LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/kanekotic/oauth-electron-twitter/graphs/commit-activity)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/kanekotic/)
 
-Use Twitter OAuth in a simple way inside your electron App.
+Use Facebook OAuth in a simple way inside your electron App.
 
 ## Installation
 
-add it to your elenctron project using npm command
-```
-npm install oauth-electron-twitter --save
-```
+add it to your electron project using `npm install oauth-electron-twitter --save` or `yarn add oauth-electron-twitter`
 
 ## Usage
 
+require `oauth-electron-twitter` exports a function that requires a javascript object and an electron window, as seen on the next example:
+
 add the require for ouath and twitter specific code from this package
-
 ```js
-var oauth = require('oauth-electron-twitter').oauth;
-var twitter = require('oauth-electron-twitter').twitter;
-```
+const login = require(`oauth-electron-twitter`)
 
-declare a twitter object, and use it as parameter for the oauth in conjuntion with the electron window used to display the login. the login method return a promise with the result or the errror provided by the login pase.
-```js
-var window = new BrowserWindow({webPreferences: {nodeIntegration: false}});
-var info = new twitter("key","secret");
-var auth = new oauth();
-auth.login(info, window).then((result) => {
-               console.log(result);
-          }).catch((error) => {
-               console.log(error);
-          });;
-```
+let info = {
+    key: ***,
+    secret: ***,
+    requestToken: ***,
+    accessToken: ***
+},
+window = new BrowserWindow({webPreferences: {nodeIntegration: false}});
 
-the result of this promise is a json object similar to next one
+auth.login(info, window)
+```
+the login function will return a Promise with the access token and secret
+
 ```
 {
-    oauth_access_token: ***,
-    oauth_access_token_secret: ***
+    token: ***,
+    tokenSecret: ***
 }
 ```
+
+## Migration V0.x to V1.x
+
+- there is no more need for the twitter object, info becomes a basic object with the properties stated in the usage step.
+- the return object has a different format.
 
 ###### logo: Award graphic by <a href="http://www.freepik.com/">Freepik</a> and Twitter graphic by <a href="http://www.icomoon.io">Icomoon</a> from <a href="http://www.flaticon.com/">Flaticon</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Made and modified with <a href="http://logomakr.com" title="Logo Maker">Logo Maker </a>
