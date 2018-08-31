@@ -4,7 +4,18 @@
   "description": "oauth for twitter inside electron",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "start": "node .",
+    "example": "node ./example/example.js",
+    "test": "jest",
+    "test:dev": "jest --watchAll test/unit",
+    "test:int": "jest test/integration",
+    "test:cov": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "push": "yarn test && git push",
+    "deploy:major": "yarn version --major",
+    "deploy:minor": "yarn version --minor",
+    "deploy:patch": "yarn version --patch",
+    "deploy:push": "git push && git push --tags",
+    "preversion": "yarn test"
   },
   "repository": {
     "type": "git",
@@ -25,15 +36,20 @@
   "bugs": {
     "url": "https://github.com/kanekotic/oauth-electron-twitter/issues"
   },
-  "devDependencies": {
-    "blanket": "^1.2.1",
-    "chai": "^3.4.1",
-    "mocha": "^2.3.4",
-    "sinon": "^1.17.2",
-    "sinon-chai": "^2.8.0"
-  },
   "dependencies": {
     "oauth": "^0.9.14",
     "query-string": "^4.1.0"
+  },
+  "devDependencies": {
+    "coveralls": "3.0.2",
+    "faker": "4.1.0",
+    "jest": "23.5.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*-test.js"
+    ],
+    "testEnvironment": "node",
+    "automock": false
   }
 }
