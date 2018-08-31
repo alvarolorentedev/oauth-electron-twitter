@@ -1,2 +1,2 @@
-module.exports.oauth = require('./lib/local-oauth').oauth;
-module.exports.twitter = require('./lib/local-oauth').twitter;
+const login = require('./lib/login')
+module.exports = { login }
