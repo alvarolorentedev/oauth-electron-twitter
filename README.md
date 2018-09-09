@@ -23,9 +23,7 @@ const login = require(`oauth-electron-twitter`)
 
 let info = {
     key: ***,
-    secret: ***,
-    requestToken: ***,
-    accessToken: ***
+    secret: ***
 },
 window = new BrowserWindow({webPreferences: {nodeIntegration: false}});
 

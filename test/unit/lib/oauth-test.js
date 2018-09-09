@@ -1,7 +1,9 @@
 jest.mock('oauth', () =>({
     OAuth: jest.fn()
 }))
-jest.mock('query-string', () => jest.fn())
+jest.mock('query-string', () => ({
+    parse: jest.fn()
+}))
 
 const Oauth = require('../../../lib/oauth'),
     OAuth1 = require('oauth').OAuth,
@@ -12,9 +14,7 @@ describe('oauth should', () => {
     test('construct using library', async () => {
         let info = { 
                 key: faker.random.uuid(),
-                secret: faker.random.uuid(),
-                requestToken: faker.random.uuid(),
-                accessToken: faker.random.uuid(),
+                secret: faker.random.uuid()
             },
             expectedResult = { some: faker.random.uuid() }
             OAuth1.mockImplementation(() => expectedResult)
@@ -22,8 +22,8 @@ describe('oauth should', () => {
         let result = new Oauth(info)
         
         expect(OAuth1).toBeCalledWith(
-            info.requestToken, 
-            info.accessToken, 
+            "https://api.twitter.com/oauth/request_token", 
+            "https://api.twitter.com/oauth/access_token", 
             info.key,
             info.secret,
             "1.0A", 
@@ -67,26 +67,13 @@ describe('oauth should', () => {
         }
         oauthMockResult = { getOAuthAccessToken: jest.fn((_,__, ___,cb) => cb(undefined, resultTokens.token, resultTokens.tokenSecret)) }
         
-        queryString.mockReturnValue(query)
+        queryString.parse.mockReturnValue(query)
         OAuth1.mockImplementation(() => oauthMockResult)
         let result = new Oauth({})
         
         expect(await result.getAccessToken(url, request)).toEqual(resultTokens)
         expect(oauthMockResult.getOAuthAccessToken).toBeCalledWith(request.token, request.tokenSecret, query.oauth_verifier, expect.anything())
-        expect(queryString).toBeCalledWith(url)
+        expect(queryString.parse).toBeCalledWith(url)
     })
 
-    // get_auth_tokens(url){
-    //     return new Promise((resolve,reject) => {
-    //         var parsed = queryString.parse(url);
-    //         this.oauth.getOAuthAccessToken(this.oauth_token, this.oauth_token_secret, parsed.oauth_verifier, (error, oauth_access_token, oauth_access_token_secret, results) => {
-    //             if (error) {
-    //                 reject(error);
-    //             }
-    //             else {
-    //               resolve({ oauth_access_token: oauth_access_token, oauth_access_token_secret: oauth_access_token_secret});
-    //             }
-    //         });
-    //     });
-    // }
 })
