@@ -1,6 +1,6 @@
 {
   "name": "oauth-electron-twitter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "oauth for twitter inside electron",
   "main": "index.js",
   "scripts": {
@@ -42,8 +42,10 @@
   },
   "devDependencies": {
     "coveralls": "3.0.2",
+    "electron": "2.0.8",
     "faker": "4.1.0",
-    "jest": "23.5.0"
+    "jest": "23.5.0",
+    "spectron": "4.0.0"
   },
   "jest": {
     "testMatch": [
