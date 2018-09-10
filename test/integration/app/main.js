@@ -3,8 +3,8 @@ const {app, BrowserWindow} = require('electron'),
   
   function createWindow () {
     let info = {
-        key: "Rh24sadwfFChzqf2fOv85Shg5",
-        secret: "fPOPRUqPYMIx91OiMAZ5Sh1rRoZKp71wvSvVo8p2c88TDQla5J",
+        key: process.env.TWITTER_KEY,
+        secret: process.env.TWITTER_SECRET
     },
     window = new BrowserWindow()
     auth.login(info, window)

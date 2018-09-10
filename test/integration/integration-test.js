@@ -18,8 +18,8 @@ describe('oauth electron', () => {
     })
 
     it('should load electron app for twitter oauth', async () => {
-        await app.client.setValue('#username_or_email', 'd2918123@nwytg.net')
-        await app.client.setValue('#password', 'vanguard.dubbin.compete')
+        await app.client.setValue('#username_or_email', process.env.TWITTER_USERNAME)
+        await app.client.setValue('#password', process.env.TWITTER_PASSWORD)
         await app.client.click('#allow') 
         await app.client.waitUntilTextExists('#result', 'Success')
     });
