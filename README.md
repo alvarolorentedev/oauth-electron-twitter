@@ -7,7 +7,7 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/kanekotic/oauth-electron-twitter/graphs/commit-activity)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/kanekotic/)
 
-Use Facebook OAuth in a simple way inside your electron App.
+Use Twitter OAuth in a simple way inside your electron App.
 
 ## Installation
 
@@ -19,7 +19,7 @@ require `oauth-electron-twitter` exports a function that requires a javascript o
 
 add the require for ouath and twitter specific code from this package
 ```js
-const login = require(`oauth-electron-twitter`)
+const auth = require(`oauth-electron-twitter`)
 
 let info = {
     key: ***,

@@ -2,7 +2,7 @@ const Application = require('spectron').Application
 const electronPath = require('electron'),
     path = require('path')
 
-describe('oauth electron', () => {
+describe.skip('oauth electron', () => {
     let app
     beforeEach(async () => {
         app = new Application({
