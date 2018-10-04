@@ -38,11 +38,11 @@
   },
   "dependencies": {
     "oauth": "^0.9.14",
-    "query-string": "^6.1.0"
+    "query-string": "^6.2.0"
   },
   "devDependencies": {
     "coveralls": "3.0.2",
-    "electron": "3.0.1",
+    "electron": "3.0.2",
     "faker": "4.1.0",
     "jest": "23.6.0",
     "spectron": "4.0.0"
