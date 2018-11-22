@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "coveralls": "3.0.2",
-    "electron": "3.0.9",
+    "electron": "3.0.10",
     "faker": "4.1.0",
     "jest": "23.6.0",
     "spectron": "5.0.0"
