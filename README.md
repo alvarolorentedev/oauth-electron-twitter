@@ -1,7 +1,7 @@
 # ![logo](https://cloud.githubusercontent.com/assets/3071208/14719944/55c32866-07ff-11e6-9821-1a564a0cf065.png)
 
 [![Build Status](https://travis-ci.org/kanekotic/oauth-electron-twitter.svg?branch=master)](https://travis-ci.org/kanekotic/oauth-electron-twitter)
-[![Coverage Status](https://coveralls.io/repos/github/kanekotic/oauth-electron-twitter/badge.svg?branch=master)](https://coveralls.io/github/kanekotic/oauth-electron-twitter?branch=master)
+[![codecov](https://codecov.io/gh/kanekotic/oauth-electron-twitter/branch/master/graph/badge.svg)](https://codecov.io/gh/kanekotic/oauth-electron-twitter)
 [![npm](https://img.shields.io/npm/dy/oauth-electron-twitter.svg)](https://github.com/kanekotic/oauth-electron-twitter)
 [![GitHub license](https://img.shields.io/github/license/kanekotic/oauth-electron-twitter.svg)](https://github.com/kanekotic/oauth-electron-twitter/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/kanekotic/oauth-electron-twitter/graphs/commit-activity)
