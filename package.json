@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "oauth": "^0.9.14",
-    "query-string": "^6.5.0"
+    "query-string": "^6.6.0"
   },
   "devDependencies": {
     "codecov": "3.5.0",
