@@ -1,6 +1,6 @@
 {
   "name": "oauth-electron-twitter",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "description": "oauth for twitter inside electron",
   "main": "index.js",
   "scripts": {
