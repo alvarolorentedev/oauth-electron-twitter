@@ -38,13 +38,13 @@
   },
   "dependencies": {
     "oauth": "^0.9.14",
-    "query-string": "^6.9.0"
+    "query-string": "^6.10.1"
   },
   "devDependencies": {
-    "codecov": "3.6.1",
-    "electron": "7.1.9",
+    "codecov": "3.6.2",
+    "electron": "7.1.10",
     "faker": "4.1.0",
-    "jest": "24.9.0",
+    "jest": "25.1.0",
     "spectron": "9.0.0"
   },
   "jest": {
