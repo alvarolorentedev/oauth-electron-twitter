@@ -42,9 +42,9 @@
   },
   "devDependencies": {
     "codecov": "3.6.5",
-    "electron": "8.2.2",
+    "electron": "8.2.3",
     "faker": "4.1.0",
-    "jest": "25.3.0",
+    "jest": "25.4.0",
     "spectron": "10.0.1"
   },
   "jest": {
