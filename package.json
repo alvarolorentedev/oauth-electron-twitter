@@ -41,7 +41,7 @@
     "query-string": "^6.13.1"
   },
   "devDependencies": {
-    "codecov": "3.7.0",
+    "codecov": "3.7.1",
     "electron": "9.1.0",
     "faker": "4.1.0",
     "jest": "26.1.0",
