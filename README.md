@@ -5,7 +5,6 @@
 [![npm](https://img.shields.io/npm/dy/oauth-electron-twitter.svg)](https://github.com/kanekotic/oauth-electron-twitter)
 [![GitHub license](https://img.shields.io/github/license/kanekotic/oauth-electron-twitter.svg)](https://github.com/kanekotic/oauth-electron-twitter/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/kanekotic/oauth-electron-twitter/graphs/commit-activity)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/kanekotic/)
 
 Use Twitter OAuth in a simple way inside your electron App.
 
