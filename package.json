@@ -43,7 +43,7 @@
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
     "codecov": "3.8.3",
-    "electron": "25.4.0",
+    "electron": "25.5.0",
     "jest": "29.6.2",
     "spectron": "19.0.0"
   },
