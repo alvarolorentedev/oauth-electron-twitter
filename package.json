@@ -41,9 +41,9 @@
     "query-string": "^8.2.0"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.4.0",
+    "@faker-js/faker": "^8.4.1",
     "codecov": "3.8.3",
-    "electron": "28.2.2",
+    "electron": "28.2.3",
     "jest": "29.7.0",
     "spectron": "19.0.0"
   },
